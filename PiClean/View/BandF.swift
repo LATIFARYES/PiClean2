@@ -71,6 +71,7 @@ struct BandF: View {
                             }
                         
                        }
+                    vm.appCount()
                     
                     }) {
                         
@@ -100,7 +101,7 @@ struct BandF: View {
 
 #Preview {
     BandF()
-        .environmentObject(ViewModel())
+    .environmentObject(ViewModel())
 
   
 }

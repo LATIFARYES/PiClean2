@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class ViewModel: ObservableObject{
     @Published var selectedImage1: UIImage?
@@ -13,6 +14,8 @@ final class ViewModel: ObservableObject{
     @Published var classificationResult2: String?
     @Published var isShowingCleanAlert: Bool?
     @Published var isShowingUnCleanAlert: Bool?
-
-
+    @AppStorage ("Count") var Count: Int = 0
+    func appCount() {
+        Count += 1
+    }
 }

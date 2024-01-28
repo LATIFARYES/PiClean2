@@ -328,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PiClean/Preview Content\"";
-				DEVELOPMENT_TEAM = ST876TKNHL;
+				DEVELOPMENT_TEAM = Q9YNMRMTZ4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app Wants to access your Camera ";
@@ -358,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PiClean/Preview Content\"";
-				DEVELOPMENT_TEAM = ST876TKNHL;
+				DEVELOPMENT_TEAM = Q9YNMRMTZ4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app Wants to access your Camera ";

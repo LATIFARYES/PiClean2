@@ -47,7 +47,7 @@ struct CameraView: View {
     @State private var showClass = false
     @State private var isShowingSheet = false
     @EnvironmentObject var vm : ViewModel
-
+    
     var body: some View {
         GeometryReader { geometry in
             
@@ -56,14 +56,14 @@ struct CameraView: View {
                     AfterPage()
                 }
                 else{
-                  
+                    
                     ZStack{
                         
                         Background()
                         
-                           
+                        
                         VStack (alignment: .center , spacing: 30) {
-
+                            
                             Text("Lets Save Our Planet!")
                                 .font(.largeTitle)
                                 .foregroundColor(Color.white)
@@ -71,7 +71,7 @@ struct CameraView: View {
                             
                             
                             
-                            Image("dirtyyplanet")
+                            Image(imageName)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 250, height: 250)
@@ -97,7 +97,7 @@ struct CameraView: View {
                                 
                                 
                             }  .padding(.top, geometry.size.height * 0.3)
-              
+                            
                         }
                         
                     }
@@ -107,7 +107,7 @@ struct CameraView: View {
                         accessCameraView(selectedImage1: $vm.selectedImage1)
                             .interactiveDismissDisabled()
                             .ignoresSafeArea()
-                          
+                        
                         
                     } // end fullScreenCover
                     
@@ -134,7 +134,7 @@ struct CameraView: View {
                                     .fontWeight(.medium)
                                     .foregroundColor(Color.textcolor)
                                     .multilineTextAlignment(.center)
-                                  
+                                
                                 
                                 
                                 Button(action: {
@@ -152,7 +152,7 @@ struct CameraView: View {
                                             .font(.system(size: 24))
                                             .foregroundColor(.white)
                                         
-                                        .accessibilityLabel("Take a Photo button")
+                                            .accessibilityLabel("Take a Photo button")
                                         
                                     }
                                     
@@ -170,8 +170,8 @@ struct CameraView: View {
                     }
                     
                     
-                   
-          }
+                    
+                }
                 
                 
             }
@@ -179,11 +179,31 @@ struct CameraView: View {
             
         }
         
-
+        
     }
     
-
+    
+    
+    var imageName: String {
+        if vm.Count == 0 {
+            return "DirtyPlanet"
+        }
+        if vm.Count == 1 {
+            return "Clean1"
+        }
+        if vm.Count == 2 {
+            return "Clean2"
+        }
+        if vm.Count == 3 {
+            return "Clean3"
+        }
+        else {
+            return "cleanPlanet"
+        }
+    }
 }
+
+
     struct accessCameraView: UIViewControllerRepresentable {
         
         @Binding var selectedImage1: UIImage?
